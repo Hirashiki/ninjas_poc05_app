@@ -1,14 +1,28 @@
 {
   "name": "testes-google-maps-gulp",
   "version": "0.0.1",
+  "engines": {
+    "node": ">=4.3.2"
+  },
+  "scripts": {
+    "start": "node ./src/app.js"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "http-server": "^0.10.0"
+  },
   "devDependencies": {
+    "@google-cloud/nodejs-repo-tools": "1.4.17",
     "gulp": "^3.8.11",
     "gulp-connect-multi": "^1.0.8"
   },
-  "dependencies": {
-    "http-server": "^0.10.0"
-  },
-  "scripts": {
-    "start": "gulp runprd && http-server ./build"
+  "cloud-repo-tools": {
+    "test": {
+      "app": {
+        "msg": "Hello, world!"
+      }
+    },
+    "requiresKeyFile": true,
+    "requiresProjectId": true
   }
 }
