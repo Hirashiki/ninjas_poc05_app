@@ -4,5 +4,11 @@
   "devDependencies": {
     "gulp": "^3.8.11",
     "gulp-connect-multi": "^1.0.8"
+  },
+  "dependencies": {
+    "http-server": "^0.10.0"
+  },
+  "scripts": {
+    "start": "gulp runprd && http-server ./build"
   }
 }
