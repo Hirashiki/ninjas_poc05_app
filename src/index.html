@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>Store Locator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
+    <style>
+        #map,
+        #pano{
+            float: left;
+            height: 100%;
+            width: 50%;
+        }
+    </style>
+
+    <head>
+
+        <body>
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+                <a class="navbar-brand" href="#">Ninjas Poc TI - POC 5 (Versão 0.1 - 28/09/2017)</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+                    aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                    <input id="address-input" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Endereço">
+                    <button class="btn btn-outline-success my-2 my-sm-0" onclick="searchAddress();">Pesquisar</button>
+                    <button class="btn btn-outline-success my-2 my-sm-0" onclick="takePicture();">Go go go!</button>
+                    <button class="btn btn-outline-success my-2 my-sm-0" onclick="deleteMarkers();">Limpar Pontos</button>
+                    <button id="lixo1" class="btn btn-outline-success my-2 my-sm-0">Foto</button>
+                    <br/>
+                    <input id="static-url" class="form-control mr-sm-2" type="text" placeholder="Satelite" aria-label="Satelite">
+                    <input id="panorama-url" class="form-control mr-sm-2" type="text" placeholder="Panorama" aria-label="Panorama">
+                </div>
+            </nav>
+            <div>
+                <div id="map"></div>
+                <div id="pano"></div>
+                <div id="mapPano" style="float:left;width:200px;height:200px;border:5px solid black;position: absolute;top:90;right:0;z-index:20;"></div>
+            </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="js/maps.js"></script>
+            <script src="js/dom-to-image.min.js"></script>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=drawing&key=AIzaSyCVrl4dGbNf4u_Xr8pseeirTunBBqY-_go&callback=initMap">
+
+            </script>
+        </body>
+
+</html>
