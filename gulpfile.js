@@ -22,18 +22,4 @@ gulp.task('watch', function(){
 })
 
 
-gulp.task('arquivos_prd', function(){
-  gulp.src(['./src/**/**/*.*'])
-     .pipe(gulp.dest('./build'))
-   })
-gulp.task('servidor_prd', connect.server({
-  root: ['build'],
-  port: 1337,
-  open: {
-      browser: 'none'
-  }
-
-}))
-
 gulp.task('default', ['arquivos', 'servidor', 'watch']);
-gulp.task('runprd', ['arquivos_prd']);

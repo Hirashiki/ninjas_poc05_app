@@ -27,7 +27,7 @@
                     <input id="address-input" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Endereço">
                     <button class="btn btn-outline-success my-2 my-sm-0" onclick="searchAddress();">Pesquisar</button>
                     <button class="btn btn-outline-success my-2 my-sm-0" onclick="takePicture();">Go go go!</button>
-                    <button class="btn btn-outline-success my-2 my-sm-0" onclick="deleteMarkers();">Limpar Pontos</button>
+                    <button id="btnDrawing" class="btn btn-outline-success my-2 my-sm-0" onclick="drawingManagerDecision();">Drawing Manager</button>
                     <button id="lixo1" class="btn btn-outline-success my-2 my-sm-0">Foto</button>
                     <br/>
                     <input id="static-url" class="form-control mr-sm-2" type="text" placeholder="Satelite" aria-label="Satelite">
@@ -41,6 +41,11 @@
             </div>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
             <script src="js/maps.js"></script>
+            <script src="js/panorama.js"></script>
+            <script src="js/endereco.js"></script>
+            <script src="js/drawingManager.js"></script>
+            <script src="js/foto.js"></script>
+            
             <script src="js/dom-to-image.min.js"></script>
             <script async defer src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=drawing&key=AIzaSyCVrl4dGbNf4u_Xr8pseeirTunBBqY-_go&callback=initMap">
 
