@@ -27,10 +27,11 @@ function takePicture(){
     
     var node = document.getElementById('map');
 
-    domtoimage.toPng(node)
+    domtoimage.toJpeg(node)
     .then(function (dataUrl) {
         var img = new Image();
         img.src = dataUrl;
+        console.log(dataUrl);
         document.body.appendChild(img);
     })
     .catch(function (error) {
