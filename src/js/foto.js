@@ -27,14 +27,26 @@ function takePicture(){
     
     var node = document.getElementById('map');
 
-    domtoimage.toJpeg(node)
+    domtoimage.toJpeg(node,{width:750,height:700})
     .then(function (dataUrl) {
-        var img = new Image();
-        img.src = dataUrl;
-        console.log(dataUrl);
-        document.body.appendChild(img);
+        //var img = new Image();
+        //img.src = dataUrl;
+        //console.log(dataUrl);
+        //document.body.appendChild(img);
+        document.getElementById('image-map').value = dataUrl;
     })
     .catch(function (error) {
         console.error('oops, something went wrong!', error);
+    });
+  }
+
+
+  function saveImage(){
+    domtoimage.toJpeg(document.getElementById('map'),{width:750,height:700})
+    .then(function (dataUrl) {
+        var link = document.createElement('a');
+        link.download = 'my-image-name.jpeg';
+        link.href = dataUrl;
+        link.click();
     });
   }
