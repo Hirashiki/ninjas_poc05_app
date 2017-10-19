@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "@google-cloud/nodejs-repo-tools": "1.4.17",
+    "cors": "^2.8.4",
     "gulp": "^3.8.11",
     "gulp-connect-multi": "^1.0.8"
   },
